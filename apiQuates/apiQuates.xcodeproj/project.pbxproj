@@ -13,6 +13,12 @@
 		F684856A28C52F75005ABF22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F684856828C52F75005ABF22 /* Main.storyboard */; };
 		F684856C28C52F76005ABF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F684856B28C52F76005ABF22 /* Assets.xcassets */; };
 		F684856F28C52F76005ABF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F684856D28C52F76005ABF22 /* LaunchScreen.storyboard */; };
+		F684857728C5D901005ABF22 /* postRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F684857628C5D901005ABF22 /* postRequest.swift */; };
+		F684857928C5DF18005ABF22 /* postAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F684857828C5DF18005ABF22 /* postAPITest.swift */; };
+		F684857B28C60DDF005ABF22 /* userResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F684857A28C60DDF005ABF22 /* userResponse.swift */; };
+		F684857D28C61325005ABF22 /* getSunriseSunset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F684857C28C61325005ABF22 /* getSunriseSunset.swift */; };
+		F684857F28C61BA3005ABF22 /* postUserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F684857E28C61BA3005ABF22 /* postUserToken.swift */; };
+		F684858128C62A3E005ABF22 /* getUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F684858028C62A3E005ABF22 /* getUserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		F684856B28C52F76005ABF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F684856E28C52F76005ABF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F684857028C52F76005ABF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F684857628C5D901005ABF22 /* postRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postRequest.swift; sourceTree = "<group>"; };
+		F684857828C5DF18005ABF22 /* postAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postAPITest.swift; sourceTree = "<group>"; };
+		F684857A28C60DDF005ABF22 /* userResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userResponse.swift; sourceTree = "<group>"; };
+		F684857C28C61325005ABF22 /* getSunriseSunset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getSunriseSunset.swift; sourceTree = "<group>"; };
+		F684857E28C61BA3005ABF22 /* postUserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postUserToken.swift; sourceTree = "<group>"; };
+		F684858028C62A3E005ABF22 /* getUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getUserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				F684856B28C52F76005ABF22 /* Assets.xcassets */,
 				F684856D28C52F76005ABF22 /* LaunchScreen.storyboard */,
 				F684857028C52F76005ABF22 /* Info.plist */,
+				F684857628C5D901005ABF22 /* postRequest.swift */,
+				F684857828C5DF18005ABF22 /* postAPITest.swift */,
+				F684857A28C60DDF005ABF22 /* userResponse.swift */,
+				F684857C28C61325005ABF22 /* getSunriseSunset.swift */,
+				F684857E28C61BA3005ABF22 /* postUserToken.swift */,
+				F684858028C62A3E005ABF22 /* getUserInfo.swift */,
 			);
 			path = apiQuates;
 			sourceTree = "<group>";
@@ -139,8 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F684856728C52F75005ABF22 /* ViewController.swift in Sources */,
+				F684858128C62A3E005ABF22 /* getUserInfo.swift in Sources */,
 				F684856328C52F75005ABF22 /* AppDelegate.swift in Sources */,
+				F684857928C5DF18005ABF22 /* postAPITest.swift in Sources */,
 				F684856528C52F75005ABF22 /* SceneDelegate.swift in Sources */,
+				F684857F28C61BA3005ABF22 /* postUserToken.swift in Sources */,
+				F684857728C5D901005ABF22 /* postRequest.swift in Sources */,
+				F684857B28C60DDF005ABF22 /* userResponse.swift in Sources */,
+				F684857D28C61325005ABF22 /* getSunriseSunset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
