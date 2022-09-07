@@ -6,36 +6,10 @@
 //
 
 import Foundation
-//func getUserInfo() {
-//
-//    let url = "https://a3d4-13-94-229-122.eu.ngrok.io/api/UserSkills/users"
-//
-//    let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
-//        guard let data = data, error == nil else {
-//            print("something went wrong")
-//            return
-//        }
-//        // have data
-//        var result: Response6?
-//        do {
-//            result = try JSONDecoder ().decode(Response6.self, from: data)
-//        }
-//        catch {
-//            print("failed to convert \(error.localizedDescription)")
-//        }
-//        guard let json = result else {
-//            return
-//        }
-//        print(json)
-//        print(json.succeeded)
-//        print(json.data.skillName)
-//        print(json.data.skillLevel)
-//    })
-//    task.resume()
-//}
-func getUserInfo() {
-    print("getUserInfo worked:")
-    guard let url = URL(string: "https://a3d4-13-94-229-122.eu.ngrok.io/api/User/Login") else {
+
+func getUserInfo(userToken: String) {
+    print("getUserInfo worked2:")
+    guard let url = URL(string: "https://05a0-88-253-133-95.eu.ngrok.io/api/UserSkills/users") else {
         return
     }
     
@@ -45,15 +19,9 @@ func getUserInfo() {
     
     //method body headers
     
-    request.httpMethod = "POST"
+    request.httpMethod = "GET"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    let body: [String: AnyHashable] = [
-        "email": "a@d-teknoloji.com.tr",
-        "password": "12345678",
-        "token": "string"
-    ]
-    request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-    
+    request.addValue("Bearer \(userToken)", forHTTPHeaderField: "Authorization")
     
     // Make the request
     let task = URLSession.shared.dataTask(with: request) { data, _, error in
@@ -62,16 +30,14 @@ func getUserInfo() {
             return
         }
         do {
-            let response = try JSONDecoder().decode(Response2.self, from: data)
+            let suggestions = try JSONDecoder().decode(Suggestions.self, from: data)
+
+            print(suggestions)
+            //let response = try JSONDecoder().decode(Suggestions.self, from: data)
+            //let response = try JSONDecoder().decode([myData].self, from: data)
             //let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
             //print("SUCCESS: \(response)")
-            print("result response: \(response.succeeded)")
-            print("result response email: \(response.data.email)")
-            print("result response token: \(response.data.token)")
-            print("type of response.data.token", type(of: response.data.token))
-            //postToken = String(response.data.token)
-            //print("postToken: ", postToken)
-            let tokenToUserRequest = response.data.token
+            //print("result response: \(response)")
             
             
         } catch {
@@ -82,14 +48,28 @@ func getUserInfo() {
     task.resume()
     
 }
-struct Response6: Codable {
-    let data: MyResult2
-    let succeeded: String
+
+struct Suggestions: Codable {
+    let succeeded: Bool
+    let data: [myData]
 }
-struct MyResult2: Codable {
+
+struct myData: Codable {
     let userSkillId: Int
     let skillLevel: Int
     let skillName: String
     let category: String
     let userId: Int
 }
+
+//struct Response6: Codable {
+//    let data: [myData]
+//    let succeeded: String
+//}
+//struct myData: Codable {
+//    let userSkillId: Int
+//    let skillLevel: Int
+//    let skillName: String
+//    let category: String
+//    let userId: Int
+//}

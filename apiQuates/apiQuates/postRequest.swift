@@ -36,9 +36,6 @@ func makePostRequest() {
         do {
             let response = try JSONDecoder().decode(Response.self, from: data)
             //let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-            print("SA")
-            print("SA")
-            print("SA")
             //print("SUCCESS: \(response)")
             print("\n response user ID: \(response.userId) \n")
         } catch {

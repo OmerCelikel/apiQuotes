@@ -9,7 +9,7 @@ import Foundation
 
 func makePostRequestLogin() {
     print("makePostRequestDoveloper worked:")
-    guard let url = URL(string: "https://a3d4-13-94-229-122.eu.ngrok.io/api/User/Login") else {
+    guard let url = URL(string: "https://05a0-88-253-133-95.eu.ngrok.io/api/User/Login") else {
         return
     }
     
@@ -46,7 +46,7 @@ func makePostRequestLogin() {
             //postToken = String(response.data.token)
             //print("postToken: ", postToken)
             let tokenToUserRequest = response.data.token
-            
+            getUserInfo(userToken: tokenToUserRequest)
             
         } catch {
             print("error1: ",error)

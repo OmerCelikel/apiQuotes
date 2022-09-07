@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDataSunrise()
+        //getDataSunrise()
     }
 
     @IBAction func randomQuoteButton(_ sender: Any) {
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     @IBAction func button2(_ sender: Any) {
         print("button2 tapped")
-        getUserInfo() 
+        //getUserInfo() 
     }
     func createQuote() {
         let url = URL(string: "https://api.kanye.rest")!
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         task.resume()
     }
     func createHelloWorld() {
-        let url = URL(string: "https://7f9f-88-227-249-129.eu.ngrok.io/api/HelloWorld?action=hello")!
+        let url = URL(string: "https://5f6e-88-253-133-95.eu.ngrok.io/api/HelloWorld?action=hello")!
         let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
             if let error = error {
                 print("error:", error)
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     }
     
     func requestAllUsersRequest() {
-        let url = URL(string: "https://7f9f-88-227-249-129.eu.ngrok.io/api/UserInfo/users")!
+        let url = URL(string: "https://5f6e-88-253-133-95.eu.ngrok.io/api/UserInfo/users")!
         let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
             if let error = error {
                 print("error:", error)
